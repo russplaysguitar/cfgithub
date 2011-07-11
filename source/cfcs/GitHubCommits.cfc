@@ -1,9 +1,9 @@
 <!---
 	Name         : GitHubCommits
-	Author       : John C. Bland II
+	Authors       : John C. Bland II and Russ Spivey
 	Created      : January 11, 2010
-	Last Updated : 1/11/2010
-	Purpose		 : Commits integration for GitHub API (see - http://develop.github.com/p/commits.html)
+	Last Updated : 7/10/2011
+	Purpose		 : Commits integration for GitHub API (see - http://developer.github.com/v3/repos/commits/)
 	
 	LICENSE 
 	Copyright 2010 John C. Bland II

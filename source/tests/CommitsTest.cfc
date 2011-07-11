@@ -1,6 +1,6 @@
 <!--- 
  CommitsTest.cfc
- @author johncblandii
+ @author johncblandii and russplaysguitar
  @description Tests commit GitHub calls
  --->
 <cfcomponent extends="tests.TestCore">
@@ -12,14 +12,8 @@
 		<cfset assertTrue(isStruct(result)) />
 	</cffunction>
 	
-	<cffunction name="listCommitsForFile" access="public" returntype="void">
-		<cfset var result = this.github.listCommitsForFile('master/README') />
-		<cfset debug(result) />
-		<cfset assertTrue(isStruct(result)) />
-	</cffunction>
-	
-	<cffunction name="getCommit" access="public" returntype="void">
-		<cfset var result = this.github.getCommit('1d710d03a17a266d785b78d70aacdc28b0864994') />
+	<cffunction name="getCommit" access="public" returntype="void" hint="This fails unless you pass a valid commit id">
+		<cfset var result = this.github.getCommit('dc5c9ac886160ff010e7') />
 		<cfset debug(result) />
 		<cfset assertTrue(isStruct(result)) />
 	</cffunction>
