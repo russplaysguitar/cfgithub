@@ -26,13 +26,13 @@
 	<cfset variables.loggingEnabled = false />
 	
 	<!--- URL PROPERTIES --->
-	<cfset variables.protocol = "http" /> <!--- http or https --->
-	<cfset variables.baseUrl = "{protocol}://github.com/api/v2/{format}" />
+	<cfset variables.protocol = "https" /> <!--- https ONLY --->
+	<cfset variables.baseUrl = "https://api.github.com" />
 	<cfset variables.user = "" />
 	<cfset variables.login = "" />
 	<cfset variables.repo = "" />
 	<cfset variables.token = "" />
-	<cfset variables.format = "" /> <!--- json, xml, yaml --->
+	<cfset variables.format = "json" /> <!--- json ONLY --->
 	
 	<cffunction name="init">
 		<cfargument name="repo" required="true" type="string" hint="Repository name" />
