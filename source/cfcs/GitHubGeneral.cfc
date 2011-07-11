@@ -3,9 +3,8 @@
 	Author       : John C. Bland II and Russ Spivey
 	Created      : January 11, 2010
 	Last Updated : 7/10/2011
-	Purpose		 : General integration for GitHub API (see - http://develop.github.com/p/general.html)
-				 : ...and also covers Git Object APi (see - http://develop.github.com/p/object.html)
-				 : ...and Network API (see - http://develop.github.com/p/network.html)
+	Purpose		 : General integration for GitHub API (see - http://developer.github.com/v3/users/)
+	Note		 : Perhaps this should be renamed to GitHubUsers.cfc?
 	
 	LICENSE 
 	Copyright 2010 John C. Bland II
