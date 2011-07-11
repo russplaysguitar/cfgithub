@@ -1,1 +1,5 @@
---nothing to see, move along
+ColdFusion library for access GitHub API. 
+
+See /source/ folder for code.
+
+Currently working on implementing the v3 API.
