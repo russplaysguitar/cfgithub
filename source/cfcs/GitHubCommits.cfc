@@ -21,7 +21,7 @@
 	limitations under the License.
 --->
 <cfcomponent displayname="GitHubCommits" extends="GitHubCore" output="false">
-	<cfset variables.commitsUrl = variables.baseUrl & "/commits/{verb}/{user}/{repo}/" />
+	<cfset variables.commitsUrl = variables.baseUrl & "/repos/{user}/{repo}/commits/" />
 
 <!--- PRIVATE --->
 	<cffunction name="$prepCommitsUrl" access="private">
@@ -37,12 +37,6 @@
 		<cfargument name="branch" required="true" type="string" hint="[branch name] - (ex: master, branch1, etc)" />
 		<cfargument name="format" type="string" default="#variables.format#" />
 		<cfreturn $getData(targetUrl=$prepCommitsUrl(arguments.branch, "list"), format=arguments.format) />
-	</cffunction>
-	
-	<cffunction name="listCommitsForFile" access="public" hint="Lists Commits for a File">
-		<cfargument name="filePath" required="true" type="string" hint="[branch]/path/to/filename.ext (ex - master/README)" />
-		<cfargument name="format" type="string" default="#variables.format#" />
-		<cfreturn $getData(targetUrl=$prepCommitsUrl(arguments.filePath, "list"), format=arguments.format) />
 	</cffunction>
 	
 	<cffunction name="getCommit" access="public" hint="Shows a Specific Commit">
