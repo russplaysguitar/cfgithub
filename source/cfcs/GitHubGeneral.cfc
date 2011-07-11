@@ -1,8 +1,8 @@
 <!---
 	Name         : GitHubGeneral
-	Author       : John C. Bland II
+	Author       : John C. Bland II and Russ Spivey
 	Created      : January 11, 2010
-	Last Updated : 1/11/2010
+	Last Updated : 7/10/2011
 	Purpose		 : General integration for GitHub API (see - http://develop.github.com/p/general.html)
 				 : ...and also covers Git Object APi (see - http://develop.github.com/p/object.html)
 				 : ...and Network API (see - http://develop.github.com/p/network.html)
@@ -34,7 +34,7 @@
 		<cfargument name="user" type="string" default="#variables.user#" hint="GitHub username" />
 		<cfargument name="token" type="string" default="#variables.token#" hint="GitHub token" />
 		<cfargument name="format" type="string" default="#variables.format#" />
-		<cfreturn $getData(targetUrl=$prepGeneralUrl("user/show/{user}"), format=arguments.format) />
+		<cfreturn $getData(targetUrl=$prepGeneralUrl("users/{user}"), format=arguments.format) />
 	</cffunction>
 	
 <!--- NETWORK --->
